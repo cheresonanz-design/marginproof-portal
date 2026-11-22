@@ -4,7 +4,7 @@ window.MARGINPROOF_CONFIG = {
   "footer_branding": "MarginProof · by VeriTakt Collective",
   "tagline": "Precision Pricing, Scope-Creep Defense & Cashflow Systems for Agencies and B2B Consultants.",
   "base_url": "https://cheresonanz-design.github.io/marginproof-portal",
-  "payhip_store_url": "",
+  "payhip_store_url": "https://payhip.com/EchoMoral",
   "imprint_status": "pending_owner_imprint_before_public_launch",
   "imprint_notice": "VeriTakt Collective (Owner Imprint & Legal Details Gate pending before custom-domain launch)",
   "products": {
@@ -16,7 +16,7 @@ window.MARGINPROOF_CONFIG = {
       "price_label": "19 EUR",
       "channel": "Payhip",
       "suggested_slug": "marginproof-rate-margin-calculator",
-      "checkout_url": "",
+      "checkout_url": "https://payhip.com/b/9q6Cf",
       "cta_label": "Get the 5-Tab Rate & Margin Spreadsheet (19 EUR)",
       "includes": [
         "MarginProof_Rate_and_Margin_Calculator.xlsx (5 interconnected tabs)",
@@ -32,7 +32,7 @@ window.MARGINPROOF_CONFIG = {
       "price_label": "29 EUR",
       "channel": "Payhip",
       "suggested_slug": "marginproof-client-retainer-profitability-os",
-      "checkout_url": "",
+      "checkout_url": "https://payhip.com/b/VYGyK",
       "cta_label": "Get the Client Retainer OS + Notion Blueprint (29 EUR)",
       "includes": [
         "MarginProof_Client_Retainer_Profitability_OS.xlsx (5 tabs)",
@@ -48,7 +48,7 @@ window.MARGINPROOF_CONFIG = {
       "price_label": "24 EUR",
       "channel": "Payhip",
       "suggested_slug": "marginproof-cashflow-tax-invoice-tracker",
-      "checkout_url": "",
+      "checkout_url": "https://payhip.com/b/vRnN1",
       "cta_label": "Get the Multi-Currency Cashflow & Tax Tracker (24 EUR)",
       "includes": [
         "MarginProof_Cashflow_Tax_Invoice_Tracker.xlsx (EUR/USD/GBP/CHF/CAD)",
@@ -64,7 +64,7 @@ window.MARGINPROOF_CONFIG = {
       "price_label": "49 EUR",
       "channel": "Payhip",
       "suggested_slug": "marginproof-complete-agency-ops-bundle",
-      "checkout_url": "",
+      "checkout_url": "https://payhip.com/b/RHu6N",
       "cta_label": "Unlock All 3 Spreadsheets + Proposal & SOW Bundle (49 EUR)",
       "includes": [
         "All 3 MarginProof Excel/Sheets Workbooks (15 tabs total)",
