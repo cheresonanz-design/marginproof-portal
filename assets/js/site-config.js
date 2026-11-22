@@ -80,7 +80,7 @@ window.MARGINPROOF_CONFIG = {
       "price_label": "3,500 EUR",
       "channel": "Stripe",
       "suggested_slug": "systems-core-rollout",
-      "checkout_url": "",
+      "checkout_url": "https://buy.stripe.com/fZu6oAfQReQu7Hy0IN24003",
       "cta_label": "Book Core Rollout via Stripe (3,500 EUR)",
       "includes": [
         "Custom Rate Card & Live Agency Profitability OS",
@@ -96,7 +96,7 @@ window.MARGINPROOF_CONFIG = {
       "price_label": "7,500 EUR",
       "channel": "Stripe",
       "suggested_slug": "systems-full-agency-os",
-      "checkout_url": "",
+      "checkout_url": "https://buy.stripe.com/5kQ14g48937M6Ducrv24004",
       "cta_label": "Book Full Agency OS via Stripe (7,500 EUR)",
       "includes": [
         "Everything in Tier 1 Core Rollout",

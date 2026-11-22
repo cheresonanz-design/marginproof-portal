@@ -1,0 +1,68 @@
+[
+  {
+    "index": 1,
+    "filename": "pin_01_hourly_rate_myth.png",
+    "image_exists": true,
+    "title": "Why 40-Hour Freelance Rate Math Destroys Your Profit (+ Calculator)",
+    "description": "Stop dividing your salary goal by 2,000 hours. Factor in 65% utilization, taxes, and payment fees with the MarginProof Rate & Margin Calculator for Excel & Google Sheets.",
+    "payhip_label": "Direct Checkout Link (19 EUR)",
+    "payhip_url": "https://payhip.com/b/9q6Cf",
+    "portal_label": "Free Lead-Magnet Calculator",
+    "portal_url": "https://cheresonanz-design.github.io/marginproof-portal/calculators/hourly-rate/"
+  },
+  {
+    "index": 2,
+    "filename": "pin_02_scope_creep_alert.png",
+    "image_exists": true,
+    "title": "Spot Over-Serviced Retainer Clients Before They Kill Your Margin",
+    "description": "Automatic utilization flags, realized hourly rate tracking, and Notion client portal templates for boutique agencies and consultants.",
+    "payhip_label": "Direct Checkout Link (29 EUR)",
+    "payhip_url": "https://payhip.com/b/VYGyK",
+    "portal_label": "Free Lead-Magnet Calculator",
+    "portal_url": "https://cheresonanz-design.github.io/marginproof-portal/calculators/retainer-profitability/"
+  },
+  {
+    "index": 3,
+    "filename": "pin_03_tax_reserve_cashflow.png",
+    "image_exists": true,
+    "title": "Freelance Multi-Currency Cashflow & Tax Reserve Spreadsheet (EUR/USD/GBP)",
+    "description": "Separate income tax reserves and VAT automatically from true spendable owner cash. Track overdue invoices and monthly runway in minutes.",
+    "payhip_label": "Direct Checkout Link (24 EUR)",
+    "payhip_url": "https://payhip.com/b/vRnN1",
+    "portal_label": "Free Lead-Magnet Calculator",
+    "portal_url": "https://cheresonanz-design.github.io/marginproof-portal/calculators/tax-runway/"
+  },
+  {
+    "index": 4,
+    "filename": "pin_04_three_tier_proposal.png",
+    "image_exists": true,
+    "title": "How Agencies Anchor Higher Fees With 3-Option Value Pricing",
+    "description": "Quote buffered fixed-fee scopes and stop discounting. Includes the complete 3-workbook Agency Ops Stack plus Proposal & SOW templates.",
+    "payhip_label": "Direct Checkout Link (49 EUR Bundle)",
+    "payhip_url": "https://payhip.com/b/RHu6N",
+    "portal_label": "Portal Hub",
+    "portal_url": "https://cheresonanz-design.github.io/marginproof-portal/"
+  },
+  {
+    "index": 5,
+    "filename": "pin_05_effective_hourly_rate.png",
+    "image_exists": true,
+    "title": "How a 10% Discount + 20% Scope Creep Cuts Your Real Rate by 37%",
+    "description": "Run the Margin Leak Simulator before you send your next fixed-fee proposal. Instant download for Excel & Google Sheets.",
+    "payhip_label": "Direct Checkout Link (19 EUR)",
+    "payhip_url": "https://payhip.com/b/9q6Cf",
+    "portal_label": "Free Lead-Magnet Calculator",
+    "portal_url": "https://cheresonanz-design.github.io/marginproof-portal/calculators/margin-leak/"
+  },
+  {
+    "index": 6,
+    "filename": "pin_06_agency_ops_bundle.png",
+    "image_exists": true,
+    "title": "Complete Freelance & Agency CFO Bundle — 3 Dashboards + Notion + SOW",
+    "description": "Everything needed to quote profitably, defend retainer boundaries, and manage multi-currency cashflow for 49 EUR.",
+    "payhip_label": "Direct Checkout Link (49 EUR Bundle)",
+    "payhip_url": "https://payhip.com/b/RHu6N",
+    "portal_label": "High-Price Systems Rollout (3,500 / 7,500 EUR)",
+    "portal_url": "https://cheresonanz-design.github.io/marginproof-portal/systems/"
+  }
+]
