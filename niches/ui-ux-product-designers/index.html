@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI/UX &amp; Product Designer Rate &amp; Margin Calculator | MarginProof</title>
+  <meta name="description" content="Price product design sprints, design systems, and SaaS UX audits with realistic utilization, QA buffers, and tax protection.">
+  <link rel="canonical" href="https://cheresonanz-design.github.io/marginproof-portal/niches/ui-ux-product-designers/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UI/UX &amp; Product Designer Rate &amp; Margin Calculator | MarginProof">
+  <meta property="og:description" content="Price product design sprints, design systems, and SaaS UX audits with realistic utilization, QA buffers, and tax protection.">
+  <meta property="og:url" content="https://cheresonanz-design.github.io/marginproof-portal/niches/ui-ux-product-designers/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='%23042f2e'%3EMP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should UI/UX consultants sell sprints or hourly blocks?", "acceptedAnswer": {"@type": "Answer", "text": "Weekly or bi-weekly design sprints backed by a calculated target day rate keep focus on velocity while capping scope drift."}}, {"@type": "Question", "name": "How much time do product designers lose to dev handoff?", "acceptedAnswer": {"@type": "Answer", "text": "Typically 12%–18% of build hours; always include a dedicated Handoff & QA line item in your fixed-fee quote."}}, {"@type": "Question", "name": "What gross margin protects a small product design studio?", "acceptedAnswer": {"@type": "Answer", "text": "Keep delivery gross margin >= 55% so bench time between SaaS contracts stays funded."}}]}</script>
+</head>
+<body data-root-rel="../../">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-lockup" href="../../">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">
+          <strong>MarginProof</strong>
+          <span>by VeriTakt Collective</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../../">Portal</a><a href="../../calculators/hourly-rate/">Rate Calculator</a><a href="../../calculators/margin-leak/">Margin Leak</a><a href="../../calculators/retainer-profitability/">Retainer OS</a><a href="../../calculators/tax-runway/">Tax &amp; Runway</a><a href="../../niches/" class="active">14 Niches</a><a href="../../systems/" class="nav-systems">Done-For-You Systems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" style="padding-bottom:18px;">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../">MarginProof Portal</a> / <a href="../">Niches</a> / UI/UX &amp; Product Design Consultants</div>
+        <span class="eyebrow">Niche Benchmark · 105–170 EUR/hr</span>
+        <h1>Rate &amp; Scope Buffer Calculator for UI/UX &amp; Product Designers</h1>
+        <p class="lead">Price product design sprints, design systems, and SaaS UX audits with realistic utilization, QA buffers, and tax protection.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px;" data-calc="niche-mini">
+      <div class="container calc-layout">
+        <div class="card">
+          <h2 style="font-size:20px; margin-bottom:12px;">Interactive UI/UX &amp; Product Design Consultants Rate Estimator</h2>
+          <input type="hidden" id="nm-currency" value="EUR">
+          <input type="hidden" id="nm-weeks" value="46">
+          <input type="hidden" id="nm-hpw" value="40">
+          <input type="hidden" id="nm-hpd" value="7">
+          <input type="hidden" id="nm-sub" value="52">
+          <input type="hidden" id="nm-fee" value="3.5">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nm-target-net">Target Annual Net (EUR)</label>
+              <input id="nm-target-net" type="number" min="0" step="1000" value="92000">
+            </div>
+            <div class="field">
+              <label for="nm-overhead">Annual Fixed Overhead (EUR)</label>
+              <input id="nm-overhead" type="number" min="0" step="500" value="11500">
+            </div>
+            <div class="field">
+              <label for="nm-tax">Tax &amp; Social Reserve %</label>
+              <input id="nm-tax" type="number" min="0" max="90" step="1" value="32">
+            </div>
+            <div class="field">
+              <label for="nm-util">Billable Utilization %</label>
+              <input id="nm-util" type="number" min="5" max="100" step="1" value="64">
+            </div>
+            <div class="field full">
+              <label for="nm-buffer">Profit &amp; Reinvestment Buffer %</label>
+              <input id="nm-buffer" type="number" min="0" max="200" step="1" value="22">
+            </div>
+          </div>
+
+          <div class="kpi-grid" style="margin-top:16px;">
+            <div class="kpi-box highlight">
+              <div class="kpi-label">Target Hourly Rate</div>
+              <div class="kpi-value" id="nm-out-hr">-</div>
+            </div>
+            <div class="kpi-box highlight">
+              <div class="kpi-label">Recommended Day Rate (7h)</div>
+              <div class="kpi-value" id="nm-out-day">-</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label">Break-Even Floor</div>
+              <div class="kpi-value" id="nm-out-floor">-</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label">Required Annual Revenue</div>
+              <div class="kpi-value" id="nm-out-gross">-</div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a id="nm-full-calc-link" data-base-href="../../calculators/hourly-rate/" href="../../calculators/hourly-rate/" class="btn btn-primary btn-sm">Open Full Rate Card Engine &rarr;</a>
+            <a href="../../calculators/margin-leak/?currency=EUR&amp;costPerHour=52" class="btn btn-secondary btn-sm">Stress-Test Margin Leaks &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 style="font-size:20px;">2026 Industry Benchmarks &amp; Common Margin Leaks</h2>
+          <div class="table-wrap" style="margin:12px 0 18px;">
+            <table>
+              <tbody>
+                <tr><th>Market Hourly Range</th><td class="num">105–170 EUR/hr</td></tr>
+                <tr><th>Market Day Rate Range</th><td class="num">735–1,190 EUR/day</td></tr>
+                <tr><th>Typical Billable Utilization</th><td class="num">64%</td></tr>
+                <tr><th>Default Subcontractor Cost Benchmark</th><td class="num">52 EUR/hr</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Top 3 Margin Leaks in This Niche</h3>
+          <ul class="check-list"><li>Adding extra edge-case states, empty screens, and developer handoff walkthroughs unbilled.</li><li>No change-order gate when product roadmap priorities pivot mid-sprint.</li><li>Underestimating asynchronous prototype testing and stakeholder alignment.</li></ul>
+          
+    <div class="upsell-card">
+      <div class="eyebrow" style="margin-bottom:8px;">Save This System in Excel &amp; Google Sheets</div>
+      <h3>MarginProof — Agency &amp; Freelance Rate &amp; Margin Calculator — 19 EUR</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 6px 0 10px;">
+        Take these exact formulas into your permanent agency workflow—zero macros, instant Payhip download, EU VAT invoice included.
+      </p>
+      <ul class="check-list"><li>MarginProof_Rate_and_Margin_Calculator.xlsx (5 interconnected tabs)</li><li>MarginProof_01_Quickstart_Guide.pdf</li><li>Zero-macro Excel &amp; Google Sheets compatibility</li></ul>
+      <div class="btn-row">
+        <a href="#checkout-p1_01_rate_calculator" class="btn btn-primary" data-product-key="p1_01_rate_calculator">Get the 5-Tab Rate &amp; Margin Spreadsheet (19 EUR)</a>
+        <a href="#checkout-p1_04_complete_bundle" class="btn btn-secondary btn-sm" data-product-key="p1_04_complete_bundle">Or Complete Bundle (49 EUR)</a>
+      </div>
+    </div>
+    <div class="upsell-card gold">
+      <div class="eyebrow gold" style="margin-bottom:8px;">For 3–25 Person Agencies</div>
+      <h3>Want MarginProof Wired Directly Into Harvest, Clockify, Notion &amp; Stripe?</h3>
+      <p style="color: var(--text-secondary); font-size: 13.5px; margin: 6px 0 12px;">
+        <strong>MarginProof Systems by VeriTakt Collective</strong> installs automated time-sync, scope alerts, and multi-currency cash governance in 14 days (3,500 EUR / 7,500 EUR via Stripe).
+      </p>
+      <a href="../../systems/" class="btn btn-gold btn-sm">Explore Turnkey Systems &amp; ROI Estimator &rarr;</a>
+    </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list" style="margin-top:12px;">
+          <div class="faq-item"><h3>Should UI/UX consultants sell sprints or hourly blocks?</h3><p>Weekly or bi-weekly design sprints backed by a calculated target day rate keep focus on velocity while capping scope drift.</p></div><div class="faq-item"><h3>How much time do product designers lose to dev handoff?</h3><p>Typically 12%–18% of build hours; always include a dedicated Handoff &amp; QA line item in your fixed-fee quote.</p></div><div class="faq-item"><h3>What gross margin protects a small product design studio?</h3><p>Keep delivery gross margin &gt;= 55% so bench time between SaaS contracts stays funded.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border">
+      <div class="container">
+        <h3>Compare Other B2B Consulting Benchmarks</h3>
+        <div class="btn-row" style="margin-top:12px;">
+          <a class="btn btn-secondary btn-sm" href="../web-designers/">Web Designers &amp; Front-End Studios</a><a class="btn btn-secondary btn-sm" href="../software-consultants/">Software &amp; Cloud Consultants</a><a class="btn btn-secondary btn-sm" href="../copywriters-content-strategists/">B2B Copywriters &amp; Content Strategists</a><a class="btn btn-secondary btn-sm" href="../performance-marketing-agencies/">Performance Marketing &amp; Paid Media Agencies</a><a class="btn btn-secondary btn-sm" href="../revops-hubspot-consultants/">RevOps &amp; HubSpot / Salesforce Consultants</a><a class="btn btn-secondary btn-sm" href="../seo-growth-agencies/">Technical SEO &amp; Organic Growth Agencies</a>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: var(--text-primary);">MarginProof · by VeriTakt Collective</strong>
+        <p style="margin: 6px 0 0;">Free interactive agency &amp; freelance margin calculators. Zero tracking cookies, 100% client-side computation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../../calculators/hourly-rate/">Rate Calculator</a>
+        <a href="../../calculators/margin-leak/">Margin Leak</a>
+        <a href="../../calculators/retainer-profitability/">Retainer Checker</a>
+        <a href="../../calculators/tax-runway/">Tax &amp; Runway</a>
+        <a href="../../niches/">All 14 Niches</a>
+        <a href="../../systems/">Systems (3.5k–7.5k EUR)</a>
+        <a href="../../legal/">Imprint &amp; Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site-config.js"></script>
+  <script src="../../assets/js/calculators.js"></script>
+</body>
+</html>

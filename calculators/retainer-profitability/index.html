@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Retainer Profitability Checker | MarginProof</title>
+  <meta name="description" content="Audit client retainer utilization, realized hourly rate, and scope-creep hours with automatic HEALTHY, WATCH, and OVER-SERVICED alerts.">
+  <link rel="canonical" href="https://cheresonanz-design.github.io/marginproof-portal/calculators/retainer-profitability/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Client Retainer Profitability Checker | MarginProof">
+  <meta property="og:description" content="Audit client retainer utilization, realized hourly rate, and scope-creep hours with automatic HEALTHY, WATCH, and OVER-SERVICED alerts.">
+  <meta property="og:url" content="https://cheresonanz-design.github.io/marginproof-portal/calculators/retainer-profitability/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='%23042f2e'%3EMP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body data-root-rel="../../">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-lockup" href="../../">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">
+          <strong>MarginProof</strong>
+          <span>by VeriTakt Collective</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../../">Portal</a><a href="../../calculators/hourly-rate/">Rate Calculator</a><a href="../../calculators/margin-leak/">Margin Leak</a><a href="../../calculators/retainer-profitability/" class="active">Retainer OS</a><a href="../../calculators/tax-runway/">Tax &amp; Runway</a><a href="../../niches/">14 Niches</a><a href="../../systems/" class="nav-systems">Done-For-You Systems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" style="padding-bottom:18px;">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../">MarginProof Portal</a> / Client Retainer Profitability Checker</div>
+        <span class="eyebrow">Calculator 03 · Retainer Audit</span>
+        <h1>Client Retainer Profitability &amp; Scope Checker</h1>
+        <p class="lead">Flag OVER-SERVICED retainer accounts (&gt;105% utilization) before silent extra work turns recurring revenue into a loss center.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px;" data-calc="retainer-profitability">
+      <div class="container calc-layout">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <h2 style="margin:0; font-size:20px;">1. Monthly Retainer Telemetry</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="rt-reset">Reset</button>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="rt-currency">Currency</label>
+              <select id="rt-currency">
+                <option value="EUR" selected>EUR</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="CAD">CAD</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rt-fee">Monthly Retainer Fee</label>
+              <input id="rt-fee" type="number" min="0" step="100" value="3500">
+            </div>
+            <div class="field">
+              <label for="rt-contracted">Contracted Hours / Month</label>
+              <input id="rt-contracted" type="number" min="1" step="1" value="25">
+            </div>
+            <div class="field">
+              <label for="rt-inscope">Logged In-Scope Hours</label>
+              <input id="rt-inscope" type="number" min="0" step="0.5" value="22">
+            </div>
+            <div class="field">
+              <label for="rt-creep">Unbilled Scope-Creep Hours</label>
+              <input id="rt-creep" type="number" min="0" step="0.5" value="8">
+              <small>Ad-hoc Slack requests &amp; extras</small>
+            </div>
+            <div class="field">
+              <label for="rt-cost">Internal Delivery Cost / Hr</label>
+              <input id="rt-cost" type="number" min="0" step="1" value="55">
+            </div>
+            <div class="field full">
+              <label for="rt-target">Agency Target Hourly Rate</label>
+              <input id="rt-target" type="number" min="1" step="5" value="135">
+            </div>
+          </div>
+        </div>
+
+        <div class="results-panel">
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
+              <div>
+                <h2 style="margin:0; font-size:20px;">2. Retainer Health Scorecard</h2>
+                <span id="out-rt-status" class="badge badge-danger" style="margin-top:6px;">OVER-SERVICED</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="rt-copy">Copy Audit</button>
+            </div>
+
+            <div class="kpi-grid">
+              <div class="kpi-box highlight">
+                <div class="kpi-label">Hour Utilization</div>
+                <div class="kpi-value" id="out-rt-util">-</div>
+                <div class="kpi-sub" id="out-rt-hours">-</div>
+              </div>
+              <div class="kpi-box highlight">
+                <div class="kpi-label">Realized Hourly Rate</div>
+                <div class="kpi-value" id="out-rt-realized">-</div>
+                <div class="kpi-sub">Contracted: <span id="out-rt-contracted-rate">-</span></div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Monthly Gross Profit</div>
+                <div class="kpi-value" id="out-rt-profit">-</div>
+                <div class="kpi-sub">Gross Margin: <span id="out-rt-margin">-</span></div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Recommended Reset Fee</div>
+                <div class="kpi-value" id="out-rt-reset">-</div>
+                <div class="kpi-sub">Unbilled value lost: <span id="out-rt-leak">-</span></div>
+              </div>
+            </div>
+
+            <div class="meter-wrap">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-muted); margin-bottom:6px;">
+                <span>Utilization Thresholds: &le;85% Healthy · 85–105% Watch · &gt;105% Over-Serviced</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" id="rt-util-meter"></div></div>
+            </div>
+
+            
+    <div class="upsell-card">
+      <div class="eyebrow" style="margin-bottom:8px;">Save This System in Excel &amp; Google Sheets</div>
+      <h3>MarginProof — Client Retainer &amp; Project Profitability OS — 29 EUR</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 6px 0 10px;">
+        Take these exact formulas into your permanent agency workflow—zero macros, instant Payhip download, EU VAT invoice included.
+      </p>
+      <ul class="check-list"><li>MarginProof_Client_Retainer_Profitability_OS.xlsx (5 tabs)</li><li>MarginProof_Notion_Workspace_Blueprint.md + 2 CSV imports</li><li>Client Onboarding &amp; Scope-Creep Checklist PDF</li></ul>
+      <div class="btn-row">
+        <a href="#checkout-p1_02_retainer_os" class="btn btn-primary" data-product-key="p1_02_retainer_os">Get the Client Retainer OS + Notion Blueprint (29 EUR)</a>
+        <a href="#checkout-p1_04_complete_bundle" class="btn btn-secondary btn-sm" data-product-key="p1_04_complete_bundle">Or Complete Bundle (49 EUR)</a>
+      </div>
+    </div>
+    <div class="upsell-card gold">
+      <div class="eyebrow gold" style="margin-bottom:8px;">For 3–25 Person Agencies</div>
+      <h3>Want MarginProof Wired Directly Into Harvest, Clockify, Notion &amp; Stripe?</h3>
+      <p style="color: var(--text-secondary); font-size: 13.5px; margin: 6px 0 12px;">
+        <strong>MarginProof Systems by VeriTakt Collective</strong> installs automated time-sync, scope alerts, and multi-currency cash governance in 14 days (3,500 EUR / 7,500 EUR via Stripe).
+      </p>
+      <a href="../../systems/" class="btn btn-gold btn-sm">Explore Turnkey Systems &amp; ROI Estimator &rarr;</a>
+    </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: var(--text-primary);">MarginProof · by VeriTakt Collective</strong>
+        <p style="margin: 6px 0 0;">Free interactive agency &amp; freelance margin calculators. Zero tracking cookies, 100% client-side computation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../../calculators/hourly-rate/">Rate Calculator</a>
+        <a href="../../calculators/margin-leak/">Margin Leak</a>
+        <a href="../../calculators/retainer-profitability/">Retainer Checker</a>
+        <a href="../../calculators/tax-runway/">Tax &amp; Runway</a>
+        <a href="../../niches/">All 14 Niches</a>
+        <a href="../../systems/">Systems (3.5k–7.5k EUR)</a>
+        <a href="../../legal/">Imprint &amp; Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site-config.js"></script>
+  <script src="../../assets/js/calculators.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Performance Marketing Agency Retainer Margin Calculator | MarginProof</title>
+  <meta name="description" content="Detect over-serviced ad management retainers and calculate true gross margin after media ops, creative refreshes, and Slack support.">
+  <link rel="canonical" href="https://cheresonanz-design.github.io/marginproof-portal/niches/performance-marketing-agencies/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Performance Marketing Agency Retainer Margin Calculator | MarginProof">
+  <meta property="og:description" content="Detect over-serviced ad management retainers and calculate true gross margin after media ops, creative refreshes, and Slack support.">
+  <meta property="og:url" content="https://cheresonanz-design.github.io/marginproof-portal/niches/performance-marketing-agencies/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='%23042f2e'%3EMP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When is a marketing agency retainer flagged as OVER-SERVICED?", "acceptedAnswer": {"@type": "Answer", "text": "Whenever logged delivery hours exceed 105% of contracted monthly hours or delivery cost drops gross margin below 50%."}}, {"@type": "Question", "name": "Should paid media agencies charge a flat setup fee?", "acceptedAnswer": {"@type": "Answer", "text": "Yes—tracking pixels, attribution QA, and initial creative matrices carry heavy month-1 labor that should never be amortized on vague promises."}}, {"@type": "Question", "name": "How do you reprice an over-serviced retainer without churn?", "acceptedAnswer": {"@type": "Answer", "text": "Present logged scope-creep hours alongside performance outcomes and offer a tiered scope cap or Tier-Upgrade proposal."}}]}</script>
+</head>
+<body data-root-rel="../../">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-lockup" href="../../">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">
+          <strong>MarginProof</strong>
+          <span>by VeriTakt Collective</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../../">Portal</a><a href="../../calculators/hourly-rate/">Rate Calculator</a><a href="../../calculators/margin-leak/">Margin Leak</a><a href="../../calculators/retainer-profitability/">Retainer OS</a><a href="../../calculators/tax-runway/">Tax &amp; Runway</a><a href="../../niches/" class="active">14 Niches</a><a href="../../systems/" class="nav-systems">Done-For-You Systems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" style="padding-bottom:18px;">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../">MarginProof Portal</a> / <a href="../">Niches</a> / Performance Marketing &amp; Paid Media Agencies</div>
+        <span class="eyebrow">Niche Benchmark · 110–175 EUR/hr</span>
+        <h1>Retainer Profitability &amp; Margin Calculator for Marketing Agencies</h1>
+        <p class="lead">Detect over-serviced ad management retainers and calculate true gross margin after media ops, creative refreshes, and Slack support.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px;" data-calc="niche-mini">
+      <div class="container calc-layout">
+        <div class="card">
+          <h2 style="font-size:20px; margin-bottom:12px;">Interactive Performance Marketing &amp; Paid Media Agencies Rate Estimator</h2>
+          <input type="hidden" id="nm-currency" value="EUR">
+          <input type="hidden" id="nm-weeks" value="47">
+          <input type="hidden" id="nm-hpw" value="42">
+          <input type="hidden" id="nm-hpd" value="7">
+          <input type="hidden" id="nm-sub" value="50">
+          <input type="hidden" id="nm-fee" value="3.5">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nm-target-net">Target Annual Net (EUR)</label>
+              <input id="nm-target-net" type="number" min="0" step="1000" value="105000">
+            </div>
+            <div class="field">
+              <label for="nm-overhead">Annual Fixed Overhead (EUR)</label>
+              <input id="nm-overhead" type="number" min="0" step="500" value="22000">
+            </div>
+            <div class="field">
+              <label for="nm-tax">Tax &amp; Social Reserve %</label>
+              <input id="nm-tax" type="number" min="0" max="90" step="1" value="32">
+            </div>
+            <div class="field">
+              <label for="nm-util">Billable Utilization %</label>
+              <input id="nm-util" type="number" min="5" max="100" step="1" value="66">
+            </div>
+            <div class="field full">
+              <label for="nm-buffer">Profit &amp; Reinvestment Buffer %</label>
+              <input id="nm-buffer" type="number" min="0" max="200" step="1" value="25">
+            </div>
+          </div>
+
+          <div class="kpi-grid" style="margin-top:16px;">
+            <div class="kpi-box highlight">
+              <div class="kpi-label">Target Hourly Rate</div>
+              <div class="kpi-value" id="nm-out-hr">-</div>
+            </div>
+            <div class="kpi-box highlight">
+              <div class="kpi-label">Recommended Day Rate (7h)</div>
+              <div class="kpi-value" id="nm-out-day">-</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label">Break-Even Floor</div>
+              <div class="kpi-value" id="nm-out-floor">-</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label">Required Annual Revenue</div>
+              <div class="kpi-value" id="nm-out-gross">-</div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a id="nm-full-calc-link" data-base-href="../../calculators/hourly-rate/" href="../../calculators/hourly-rate/" class="btn btn-primary btn-sm">Open Full Rate Card Engine &rarr;</a>
+            <a href="../../calculators/retainer-profitability/?currency=EUR&amp;costPerHour=50" class="btn btn-secondary btn-sm">Open Retainer Profitability Checker &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 style="font-size:20px;">2026 Industry Benchmarks &amp; Common Margin Leaks</h2>
+          <div class="table-wrap" style="margin:12px 0 18px;">
+            <table>
+              <tbody>
+                <tr><th>Market Hourly Range</th><td class="num">110–175 EUR/hr</td></tr>
+                <tr><th>Market Day Rate Range</th><td class="num">770–1,225 EUR/day</td></tr>
+                <tr><th>Typical Billable Utilization</th><td class="num">66%</td></tr>
+                <tr><th>Default Subcontractor Cost Benchmark</th><td class="num">50 EUR/hr</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Top 3 Margin Leaks in This Niche</h3>
+          <ul class="check-list"><li>Constant &#x27;quick ad creative tweaks&#x27; and landing page QA bundled free inside flat media retainers.</li><li>Weekly 60-minute status calls + Slack support consuming 30% of account manager hours.</li><li>Discounting setup fees in month 1 and never recovering onboarding labor.</li></ul>
+          
+    <div class="upsell-card">
+      <div class="eyebrow" style="margin-bottom:8px;">Save This System in Excel &amp; Google Sheets</div>
+      <h3>MarginProof — Client Retainer &amp; Project Profitability OS — 29 EUR</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 6px 0 10px;">
+        Take these exact formulas into your permanent agency workflow—zero macros, instant Payhip download, EU VAT invoice included.
+      </p>
+      <ul class="check-list"><li>MarginProof_Client_Retainer_Profitability_OS.xlsx (5 tabs)</li><li>MarginProof_Notion_Workspace_Blueprint.md + 2 CSV imports</li><li>Client Onboarding &amp; Scope-Creep Checklist PDF</li></ul>
+      <div class="btn-row">
+        <a href="#checkout-p1_02_retainer_os" class="btn btn-primary" data-product-key="p1_02_retainer_os">Get the Client Retainer OS + Notion Blueprint (29 EUR)</a>
+        <a href="#checkout-p1_04_complete_bundle" class="btn btn-secondary btn-sm" data-product-key="p1_04_complete_bundle">Or Complete Bundle (49 EUR)</a>
+      </div>
+    </div>
+    <div class="upsell-card gold">
+      <div class="eyebrow gold" style="margin-bottom:8px;">For 3–25 Person Agencies</div>
+      <h3>Want MarginProof Wired Directly Into Harvest, Clockify, Notion &amp; Stripe?</h3>
+      <p style="color: var(--text-secondary); font-size: 13.5px; margin: 6px 0 12px;">
+        <strong>MarginProof Systems by VeriTakt Collective</strong> installs automated time-sync, scope alerts, and multi-currency cash governance in 14 days (3,500 EUR / 7,500 EUR via Stripe).
+      </p>
+      <a href="../../systems/" class="btn btn-gold btn-sm">Explore Turnkey Systems &amp; ROI Estimator &rarr;</a>
+    </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list" style="margin-top:12px;">
+          <div class="faq-item"><h3>When is a marketing agency retainer flagged as OVER-SERVICED?</h3><p>Whenever logged delivery hours exceed 105% of contracted monthly hours or delivery cost drops gross margin below 50%.</p></div><div class="faq-item"><h3>Should paid media agencies charge a flat setup fee?</h3><p>Yes—tracking pixels, attribution QA, and initial creative matrices carry heavy month-1 labor that should never be amortized on vague promises.</p></div><div class="faq-item"><h3>How do you reprice an over-serviced retainer without churn?</h3><p>Present logged scope-creep hours alongside performance outcomes and offer a tiered scope cap or Tier-Upgrade proposal.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border">
+      <div class="container">
+        <h3>Compare Other B2B Consulting Benchmarks</h3>
+        <div class="btn-row" style="margin-top:12px;">
+          <a class="btn btn-secondary btn-sm" href="../web-designers/">Web Designers &amp; Front-End Studios</a><a class="btn btn-secondary btn-sm" href="../software-consultants/">Software &amp; Cloud Consultants</a><a class="btn btn-secondary btn-sm" href="../copywriters-content-strategists/">B2B Copywriters &amp; Content Strategists</a><a class="btn btn-secondary btn-sm" href="../ui-ux-product-designers/">UI/UX &amp; Product Design Consultants</a><a class="btn btn-secondary btn-sm" href="../revops-hubspot-consultants/">RevOps &amp; HubSpot / Salesforce Consultants</a><a class="btn btn-secondary btn-sm" href="../seo-growth-agencies/">Technical SEO &amp; Organic Growth Agencies</a>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: var(--text-primary);">MarginProof · by VeriTakt Collective</strong>
+        <p style="margin: 6px 0 0;">Free interactive agency &amp; freelance margin calculators. Zero tracking cookies, 100% client-side computation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../../calculators/hourly-rate/">Rate Calculator</a>
+        <a href="../../calculators/margin-leak/">Margin Leak</a>
+        <a href="../../calculators/retainer-profitability/">Retainer Checker</a>
+        <a href="../../calculators/tax-runway/">Tax &amp; Runway</a>
+        <a href="../../niches/">All 14 Niches</a>
+        <a href="../../systems/">Systems (3.5k–7.5k EUR)</a>
+        <a href="../../legal/">Imprint &amp; Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site-config.js"></script>
+  <script src="../../assets/js/calculators.js"></script>
+</body>
+</html>

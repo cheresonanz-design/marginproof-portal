@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freelance Hourly &amp; Day Rate Calculator | MarginProof</title>
+  <meta name="description" content="Calculate your true break-even floor, profitable target hourly rate, day rate, and weekly sprint pricing with utilization and tax reserves.">
+  <link rel="canonical" href="https://cheresonanz-design.github.io/marginproof-portal/calculators/hourly-rate/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Freelance Hourly &amp; Day Rate Calculator | MarginProof">
+  <meta property="og:description" content="Calculate your true break-even floor, profitable target hourly rate, day rate, and weekly sprint pricing with utilization and tax reserves.">
+  <meta property="og:url" content="https://cheresonanz-design.github.io/marginproof-portal/calculators/hourly-rate/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='%23042f2e'%3EMP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body data-root-rel="../../">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-lockup" href="../../">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">
+          <strong>MarginProof</strong>
+          <span>by VeriTakt Collective</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../../">Portal</a><a href="../../calculators/hourly-rate/" class="active">Rate Calculator</a><a href="../../calculators/margin-leak/">Margin Leak</a><a href="../../calculators/retainer-profitability/">Retainer OS</a><a href="../../calculators/tax-runway/">Tax &amp; Runway</a><a href="../../niches/">14 Niches</a><a href="../../systems/" class="nav-systems">Done-For-You Systems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" style="padding-bottom:18px;">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../">MarginProof Portal</a> / Hourly &amp; Day Rate Calculator</div>
+        <span class="eyebrow">Calculator 01 · Pricing Engine</span>
+        <h1>Freelance &amp; Agency Hourly &amp; Day Rate Calculator</h1>
+        <p class="lead">Stop dividing your salary target by 2,080 hours. Factor in realistic billable utilization, tax reserves, overhead, profit buffers, and Stripe/Payhip fees.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px;" data-calc="hourly-rate">
+      <div class="container calc-layout">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <h2 style="margin:0; font-size:20px;">1. Business &amp; Capacity Inputs</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="hr-reset">Reset</button>
+          </div>
+          <div id="hr-warnings" class="alert-banner alert-warn"></div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="hr-currency">Currency</label>
+              <select id="hr-currency">
+                <option value="EUR" selected>EUR</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="CAD">CAD</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="hr-target-net">Target Annual Owner Net</label>
+              <input id="hr-target-net" type="number" min="0" step="1000" value="90000">
+              <small>After overhead &amp; income taxes</small>
+            </div>
+            <div class="field">
+              <label for="hr-overhead">Annual Fixed Overhead</label>
+              <input id="hr-overhead" type="number" min="0" step="500" value="14400">
+              <small>Software, insurance, accounting</small>
+            </div>
+            <div class="field">
+              <label for="hr-tax">Effective Tax &amp; Social %</label>
+              <input id="hr-tax" type="number" min="0" max="90" step="1" value="32">
+              <small>Combined income tax + social</small>
+            </div>
+            <div class="field">
+              <label for="hr-weeks">Working Weeks / Year</label>
+              <input id="hr-weeks" type="number" min="1" max="52" step="1" value="46">
+              <small>52 minus holidays &amp; leave</small>
+            </div>
+            <div class="field">
+              <label for="hr-hours-week">Total Working Hours / Week</label>
+              <input id="hr-hours-week" type="number" min="1" max="80" step="1" value="40">
+            </div>
+            <div class="field">
+              <label for="hr-util">Billable Utilization %</label>
+              <input id="hr-util" type="number" min="5" max="100" step="1" value="65">
+              <small>Realistic solo/agency share: 55–75%</small>
+            </div>
+            <div class="field">
+              <label for="hr-hours-day">Billable Hours / Day</label>
+              <input id="hr-hours-day" type="number" min="1" max="16" step="0.5" value="7">
+            </div>
+            <div class="field">
+              <label for="hr-buffer">Profit &amp; Reinvestment Buffer %</label>
+              <input id="hr-buffer" type="number" min="0" max="200" step="1" value="20">
+            </div>
+            <div class="field">
+              <label for="hr-sub-cost">Avg. Subcontractor Cost / Hr</label>
+              <input id="hr-sub-cost" type="number" min="0" step="1" value="48">
+            </div>
+            <div class="field full">
+              <label for="hr-fee">Payment &amp; Platform Fee Buffer %</label>
+              <input id="hr-fee" type="number" min="0" max="50" step="0.5" value="3.5">
+              <small>Stripe, Payhip &amp; FX card conversion reserve</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-panel">
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+              <h2 style="margin:0; font-size:20px;">2. Your Calculated Rate Card</h2>
+              <button type="button" class="btn btn-secondary btn-sm" id="hr-copy">Copy Summary</button>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi-box highlight">
+                <div class="kpi-label">Target Profitable Rate</div>
+                <div class="kpi-value" id="out-hr-target">-</div>
+                <div class="kpi-sub">Default proposal rate</div>
+              </div>
+              <div class="kpi-box highlight">
+                <div class="kpi-label">Recommended Day Rate</div>
+                <div class="kpi-value" id="out-hr-day">-</div>
+                <div class="kpi-sub">Anchor quotes on full days</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Break-Even Floor Rate</div>
+                <div class="kpi-value" id="out-hr-floor">-</div>
+                <div class="kpi-sub">0% profit — hard walk-away</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Annual Gross Revenue Target</div>
+                <div class="kpi-value" id="out-hr-gross">-</div>
+                <div class="kpi-sub" id="out-hr-monthly">-</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Realistic Billable Hours</div>
+                <div class="kpi-value" id="out-hr-billable">-</div>
+                <div class="kpi-sub">Unbilled sales/ops: <span id="out-hr-unbilled">-</span></div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Margin vs. Subcontractor</div>
+                <div class="kpi-value" id="out-hr-submargin">-</div>
+                <div class="kpi-sub">Target &ge; 50% spread</div>
+              </div>
+            </div>
+
+            <div class="meter-wrap">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-muted); margin-bottom:6px;">
+                <span>Delivery Spread Health</span>
+                <span>Target &ge; 50%</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" id="hr-margin-meter"></div></div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Rate Card Tier</th><th class="num">Hourly</th><th class="num">Day</th><th class="num">5-Day Sprint</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Floor (Break-Even Only)</td><td class="num" id="tier-floor-hr">-</td><td class="num" id="tier-floor-day">-</td><td class="num" id="tier-floor-wk">-</td></tr>
+                  <tr style="font-weight:700;"><td>Standard Target Rate</td><td class="num" id="tier-std-hr">-</td><td class="num" id="tier-std-day">-</td><td class="num" id="tier-std-wk">-</td></tr>
+                  <tr><td>Retainer / Value (+15%)</td><td class="num" id="tier-val-hr">-</td><td class="num" id="tier-val-day">-</td><td class="num" id="tier-val-wk">-</td></tr>
+                  <tr><td>Rush / Priority (+35%)</td><td class="num" id="tier-rush-hr">-</td><td class="num" id="tier-rush-day">-</td><td class="num" id="tier-rush-wk">-</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            
+    <div class="upsell-card">
+      <div class="eyebrow" style="margin-bottom:8px;">Save This System in Excel &amp; Google Sheets</div>
+      <h3>MarginProof — Agency &amp; Freelance Rate &amp; Margin Calculator — 19 EUR</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 6px 0 10px;">
+        Take these exact formulas into your permanent agency workflow—zero macros, instant Payhip download, EU VAT invoice included.
+      </p>
+      <ul class="check-list"><li>MarginProof_Rate_and_Margin_Calculator.xlsx (5 interconnected tabs)</li><li>MarginProof_01_Quickstart_Guide.pdf</li><li>Zero-macro Excel &amp; Google Sheets compatibility</li></ul>
+      <div class="btn-row">
+        <a href="#checkout-p1_01_rate_calculator" class="btn btn-primary" data-product-key="p1_01_rate_calculator">Get the 5-Tab Rate &amp; Margin Spreadsheet (19 EUR)</a>
+        <a href="#checkout-p1_04_complete_bundle" class="btn btn-secondary btn-sm" data-product-key="p1_04_complete_bundle">Or Complete Bundle (49 EUR)</a>
+      </div>
+    </div>
+    <div class="upsell-card gold">
+      <div class="eyebrow gold" style="margin-bottom:8px;">For 3–25 Person Agencies</div>
+      <h3>Want MarginProof Wired Directly Into Harvest, Clockify, Notion &amp; Stripe?</h3>
+      <p style="color: var(--text-secondary); font-size: 13.5px; margin: 6px 0 12px;">
+        <strong>MarginProof Systems by VeriTakt Collective</strong> installs automated time-sync, scope alerts, and multi-currency cash governance in 14 days (3,500 EUR / 7,500 EUR via Stripe).
+      </p>
+      <a href="../../systems/" class="btn btn-gold btn-sm">Explore Turnkey Systems &amp; ROI Estimator &rarr;</a>
+    </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: var(--text-primary);">MarginProof · by VeriTakt Collective</strong>
+        <p style="margin: 6px 0 0;">Free interactive agency &amp; freelance margin calculators. Zero tracking cookies, 100% client-side computation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../../calculators/hourly-rate/">Rate Calculator</a>
+        <a href="../../calculators/margin-leak/">Margin Leak</a>
+        <a href="../../calculators/retainer-profitability/">Retainer Checker</a>
+        <a href="../../calculators/tax-runway/">Tax &amp; Runway</a>
+        <a href="../../niches/">All 14 Niches</a>
+        <a href="../../systems/">Systems (3.5k–7.5k EUR)</a>
+        <a href="../../legal/">Imprint &amp; Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site-config.js"></script>
+  <script src="../../assets/js/calculators.js"></script>
+</body>
+</html>

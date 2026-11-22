@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cheresonanz-design.github.io/marginproof-portal/sitemap.xml

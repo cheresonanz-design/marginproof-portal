@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Currency Tax Reserve &amp; Cash Runway Calculator | MarginProof</title>
+  <meta name="description" content="Calculate multi-currency freelance revenue in EUR/USD/GBP/CHF/CAD, isolate VAT and income tax reserves, and measure true cash runway.">
+  <link rel="canonical" href="https://cheresonanz-design.github.io/marginproof-portal/calculators/tax-runway/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Multi-Currency Tax Reserve &amp; Cash Runway Calculator | MarginProof">
+  <meta property="og:description" content="Calculate multi-currency freelance revenue in EUR/USD/GBP/CHF/CAD, isolate VAT and income tax reserves, and measure true cash runway.">
+  <meta property="og:url" content="https://cheresonanz-design.github.io/marginproof-portal/calculators/tax-runway/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='%23042f2e'%3EMP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body data-root-rel="../../">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-lockup" href="../../">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">
+          <strong>MarginProof</strong>
+          <span>by VeriTakt Collective</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="../../">Portal</a><a href="../../calculators/hourly-rate/">Rate Calculator</a><a href="../../calculators/margin-leak/">Margin Leak</a><a href="../../calculators/retainer-profitability/">Retainer OS</a><a href="../../calculators/tax-runway/" class="active">Tax &amp; Runway</a><a href="../../niches/">14 Niches</a><a href="../../systems/" class="nav-systems">Done-For-You Systems</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="hero" style="padding-bottom:18px;">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../">MarginProof Portal</a> / Multi-Currency Tax Reserve &amp; Runway Calculator</div>
+        <span class="eyebrow">Calculator 04 · Cash &amp; Tax Vault</span>
+        <h1>Multi-Currency Tax Reserve &amp; Cash Runway Calculator</h1>
+        <p class="lead">Separate VAT and income-tax liabilities from your bank balance so you always know your true spendable owner cash and runway months.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px;" data-calc="tax-runway">
+      <div class="container calc-layout">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+            <h2 style="margin:0; font-size:20px;">1. Multi-Currency Cash &amp; Tax Inputs</h2>
+            <button type="button" class="btn btn-secondary btn-sm" id="tx-reset">Reset</button>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="tx-base-cur">Base Reporting Currency</label>
+              <select id="tx-base-cur">
+                <option value="EUR" selected>EUR</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="tx-bank">Current Bank Cash Balance</label>
+              <input id="tx-bank" type="number" min="0" step="500" value="18500">
+            </div>
+            <div class="field">
+              <label for="tx-rev-base">Monthly Revenue (Base Currency)</label>
+              <input id="tx-rev-base" type="number" min="0" step="250" value="6500">
+            </div>
+            <div class="field">
+              <label for="tx-fx-cur">Foreign Invoice Currency</label>
+              <select id="tx-fx-cur">
+                <option value="USD" selected>USD</option>
+                <option value="GBP">GBP</option>
+                <option value="CHF">CHF</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="tx-rev-fx">Monthly Foreign Revenue (Orig.)</label>
+              <input id="tx-rev-fx" type="number" min="0" step="250" value="3200">
+            </div>
+            <div class="field">
+              <label for="tx-fx-rate">FX Rate to Base Currency</label>
+              <input id="tx-fx-rate" type="number" min="0.01" step="0.005" value="0.920">
+            </div>
+            <div class="field">
+              <label for="tx-exp">Monthly Operating Expenses</label>
+              <input id="tx-exp" type="number" min="0" step="100" value="3200">
+            </div>
+            <div class="field">
+              <label for="tx-tax-rate">Income Tax Reserve %</label>
+              <input id="tx-tax-rate" type="number" min="0" max="60" step="1" value="30">
+            </div>
+            <div class="field">
+              <label for="tx-vat-share">Share of Revenue w/ VAT %</label>
+              <input id="tx-vat-share" type="number" min="0" max="100" step="5" value="65">
+            </div>
+            <div class="field">
+              <label for="tx-vat-rate">VAT / Sales Tax Rate %</label>
+              <input id="tx-vat-rate" type="number" min="0" max="35" step="1" value="19">
+            </div>
+            <div class="field">
+              <label for="tx-months">Unpaid Tax/VAT Months in Bank</label>
+              <input id="tx-months" type="number" min="1" max="12" step="1" value="3">
+              <small>Quarterly VAT/tax accrual window</small>
+            </div>
+            <div class="field">
+              <label for="tx-ar-open">Open Invoices (Sent)</label>
+              <input id="tx-ar-open" type="number" min="0" step="100" value="4200">
+            </div>
+            <div class="field full">
+              <label for="tx-ar-overdue">Overdue Invoices at Risk</label>
+              <input id="tx-ar-overdue" type="number" min="0" step="100" value="1400">
+            </div>
+          </div>
+        </div>
+
+        <div class="results-panel">
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
+              <div>
+                <h2 style="margin:0; font-size:20px;">2. Safe-to-Spend Cash &amp; Runway</h2>
+                <span id="out-tx-status" class="badge badge-healthy" style="margin-top:6px;">SAFE</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="tx-copy">Copy Snapshot</button>
+            </div>
+
+            <div class="kpi-grid">
+              <div class="kpi-box highlight">
+                <div class="kpi-label">True Owner Spendable Cash</div>
+                <div class="kpi-value" id="out-tx-spendable">-</div>
+                <div class="kpi-sub">After reserved tax &amp; VAT vault</div>
+              </div>
+              <div class="kpi-box highlight">
+                <div class="kpi-label">Spendable Runway</div>
+                <div class="kpi-value" id="out-tx-runway">-</div>
+                <div class="kpi-sub">Target &ge; 6.0 months</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Converted Monthly Revenue</div>
+                <div class="kpi-value" id="out-tx-rev-total">-</div>
+                <div class="kpi-sub">Owner net/mo: <span id="out-tx-owner-net">-</span></div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-label">Statutory Tax &amp; VAT Vault</div>
+                <div class="kpi-value" id="out-tx-reserves">-</div>
+                <div class="kpi-sub">Tax: <span id="out-tx-tax-mo">-</span> | VAT: <span id="out-tx-vat-mo">-</span></div>
+              </div>
+            </div>
+
+            <div class="card-subtle" style="margin-bottom:14px;">
+              <strong>Receivables Watch:</strong> <span id="out-tx-ar-risk">-</span>
+            </div>
+
+            <div class="meter-wrap">
+              <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-muted); margin-bottom:6px;">
+                <span>Runway Cushion (0–12 Months)</span>
+                <span>Target &ge; 6.0 mo</span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" id="tx-runway-meter"></div></div>
+            </div>
+
+            
+    <div class="upsell-card">
+      <div class="eyebrow" style="margin-bottom:8px;">Save This System in Excel &amp; Google Sheets</div>
+      <h3>MarginProof — Freelance Cashflow, Tax Reserve &amp; Invoice Tracker — 24 EUR</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin: 6px 0 10px;">
+        Take these exact formulas into your permanent agency workflow—zero macros, instant Payhip download, EU VAT invoice included.
+      </p>
+      <ul class="check-list"><li>MarginProof_Cashflow_Tax_Invoice_Tracker.xlsx (EUR/USD/GBP/CHF/CAD)</li><li>Automated VAT &amp; Income Tax Vault Reserves</li><li>MarginProof_03_Quickstart_Guide.pdf</li></ul>
+      <div class="btn-row">
+        <a href="#checkout-p1_03_cashflow_tracker" class="btn btn-primary" data-product-key="p1_03_cashflow_tracker">Get the Multi-Currency Cashflow &amp; Tax Tracker (24 EUR)</a>
+        <a href="#checkout-p1_04_complete_bundle" class="btn btn-secondary btn-sm" data-product-key="p1_04_complete_bundle">Or Complete Bundle (49 EUR)</a>
+      </div>
+    </div>
+    <div class="upsell-card gold">
+      <div class="eyebrow gold" style="margin-bottom:8px;">For 3–25 Person Agencies</div>
+      <h3>Want MarginProof Wired Directly Into Harvest, Clockify, Notion &amp; Stripe?</h3>
+      <p style="color: var(--text-secondary); font-size: 13.5px; margin: 6px 0 12px;">
+        <strong>MarginProof Systems by VeriTakt Collective</strong> installs automated time-sync, scope alerts, and multi-currency cash governance in 14 days (3,500 EUR / 7,500 EUR via Stripe).
+      </p>
+      <a href="../../systems/" class="btn btn-gold btn-sm">Explore Turnkey Systems &amp; ROI Estimator &rarr;</a>
+    </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: var(--text-primary);">MarginProof · by VeriTakt Collective</strong>
+        <p style="margin: 6px 0 0;">Free interactive agency &amp; freelance margin calculators. Zero tracking cookies, 100% client-side computation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../../calculators/hourly-rate/">Rate Calculator</a>
+        <a href="../../calculators/margin-leak/">Margin Leak</a>
+        <a href="../../calculators/retainer-profitability/">Retainer Checker</a>
+        <a href="../../calculators/tax-runway/">Tax &amp; Runway</a>
+        <a href="../../niches/">All 14 Niches</a>
+        <a href="../../systems/">Systems (3.5k–7.5k EUR)</a>
+        <a href="../../legal/">Imprint &amp; Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/site-config.js"></script>
+  <script src="../../assets/js/calculators.js"></script>
+</body>
+</html>
