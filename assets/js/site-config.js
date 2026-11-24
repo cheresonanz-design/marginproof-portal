@@ -85,7 +85,7 @@ window.MARGINPROOF_CONFIG = {
       "includes": [
         "Custom Rate Card & Live Agency Profitability OS",
         "Automated Harvest / Clockify / Toggl / Notion CSV & Webhook sync",
-        "Monthly Scope-Creep Alert Script + 2x Team Trainings + 30-day tuning"
+        "Monthly Scope-Creep Alert Script + 2x Team Trainings + 30-day async email tuning (Mon–Fri)"
       ]
     },
     "stripe_full_os": {
@@ -101,7 +101,7 @@ window.MARGINPROOF_CONFIG = {
       "includes": [
         "Everything in Tier 1 Core Rollout",
         "Automated Stripe Payment Link -> Invoice -> Cashflow & Tax Ledger sync",
-        "Automated SOW/Proposal Generator + 60-day executive hypercare"
+        "Automated SOW/Proposal Generator + 60-day async executive email tuning (Mon–Fri)"
       ]
     }
   }
