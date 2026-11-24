@@ -5,8 +5,8 @@
   "tagline": "Precision Pricing, Scope-Creep Defense & Cashflow Systems for Agencies and B2B Consultants.",
   "base_url": "https://cheresonanz-design.github.io/marginproof-portal",
   "payhip_store_url": "https://payhip.com/EchoMoral",
-  "imprint_status": "pending_owner_imprint_before_public_launch",
-  "imprint_notice": "VeriTakt Collective (Owner Imprint & Legal Details Gate pending before custom-domain launch)",
+  "imprint_status": "live_owner_imprint_active",
+  "imprint_notice": "MarginProof · by VeriTakt Collective (Gewerbe: ImportKlar) — Che Goncalves Menendez, Liegnitzstr. 53A, 28237 Bremen, Germany — che.resonanz@gmail.com — Tax-exempt under § 19 UStG (Kleinunternehmerregelung)",
   "products": {
     "p1_01_rate_calculator": {
       "id": "MP-01",

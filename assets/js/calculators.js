@@ -238,8 +238,8 @@
    */
   function calculateTaxAndRunway(raw) {
     var baseCurrency = (raw && raw.baseCurrency) || "EUR";
-    var fxCurrency = (raw && raw.fxCurrency) || "USD";
-    var fxRate = Math.max(0.01, num(raw && raw.fxRate, 0.92));
+    var fxCurrency = (raw && raw.fxCurrency) || "EUR";
+    var fxRate = Math.max(0.01, num(raw && raw.fxRate, 1.0));
     var bankBalance = Math.max(0, num(raw && raw.bankBalance, 18500));
     var baseMonthlyRevenue = Math.max(0, num(raw && raw.baseMonthlyRevenue, 6500));
     var fxMonthlyRevenue = Math.max(0, num(raw && raw.fxMonthlyRevenue, 3200));
