@@ -74,14 +74,14 @@ window.MARGINPROOF_CONFIG = {
     },
     "stripe_core_rollout": {
       "id": "MP-SYS-CORE",
-      "name": "MarginProof Systems — Core Margin & Retainer Automation Rollout",
-      "short_name": "Core Margin & Retainer Automation Rollout",
+      "name": "MarginProof Systems — Tier 1 Core Margin & Retainer Technical Setup (B2B Inquiry)",
+      "short_name": "Core Margin & Retainer Technical Setup",
       "price_eur": 3500,
       "price_label": "3,500 EUR",
-      "channel": "Stripe",
+      "channel": "B2B SOW Inquiry",
       "suggested_slug": "systems-core-rollout",
-      "checkout_url": "https://buy.stripe.com/fZu6oAfQReQu7Hy0IN24003",
-      "cta_label": "Book Core Rollout via Stripe (3,500 EUR)",
+      "checkout_url": "mailto:che.resonanz@gmail.com?subject=MarginProof%20Systems%20Core%20Setup%20%28B2B%20SOW%20Inquiry%29",
+      "cta_label": "Request B2B Discovery & SOW (3,500 EUR)",
       "includes": [
         "Custom Rate Card & Live Agency Profitability OS",
         "Automated Harvest / Clockify / Toggl / Notion CSV & Webhook sync",
@@ -90,18 +90,18 @@ window.MARGINPROOF_CONFIG = {
     },
     "stripe_full_os": {
       "id": "MP-SYS-FULL",
-      "name": "MarginProof Systems — Full Agency Financial & Client Operations OS",
+      "name": "MarginProof Systems — Tier 2 Full Agency Financial & Client Operations OS (B2B Inquiry)",
       "short_name": "Full Agency Financial & Client Operations OS",
       "price_eur": 7500,
       "price_label": "7,500 EUR",
-      "channel": "Stripe",
+      "channel": "B2B SOW Inquiry",
       "suggested_slug": "systems-full-agency-os",
-      "checkout_url": "https://buy.stripe.com/5kQ14g48937M6Ducrv24004",
-      "cta_label": "Book Full Agency OS via Stripe (7,500 EUR)",
+      "checkout_url": "mailto:che.resonanz@gmail.com?subject=MarginProof%20Systems%20Full%20OS%20%28B2B%20SOW%20Inquiry%29",
+      "cta_label": "Request B2B Discovery & SOW (7,500 EUR)",
       "includes": [
-        "Everything in Tier 1 Core Rollout",
-        "Automated Stripe Payment Link -> Invoice -> Cashflow & Tax Ledger sync",
-        "Automated SOW/Proposal Generator + 60-day async executive email tuning (Mon–Fri)"
+        "Everything in Tier 1 Core Rollout (technical setup, no tax/legal advice)",
+        "Automated Stripe Payment Link / Webhook -> Cashflow & Reserve ledger sync",
+        "Automated SOW/Proposal Templates + 60-day async executive email tuning (Mon–Fri)"
       ]
     }
   }

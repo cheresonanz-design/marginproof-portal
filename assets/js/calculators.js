@@ -932,6 +932,7 @@
   function initSystemsRoi(doc) {
     var revEl = doc.getElementById("sys-rev");
     var leakEl = doc.getElementById("sys-leak");
+    var recEl = doc.getElementById("sys-rec-pct");
     var tierEl = doc.getElementById("sys-tier");
     if (!revEl || !leakEl || !tierEl) return;
 
@@ -939,17 +940,18 @@
       var res = calculateSystemsRoi({
         monthlyRevenue: revEl.value,
         leakedMarginPct: leakEl.value,
-        recoverySharePct: 75,
+        recoverySharePct: recEl ? recEl.value : 50,
         tierPrice: tierEl.value,
       });
       setText(doc, "out-sys-leak-mo", formatMoney(res.monthlyLeak, "EUR", 0) + "/mo");
       setText(doc, "out-sys-rec-mo", formatMoney(res.monthlyRecovered, "EUR", 0) + "/mo");
       setText(doc, "out-sys-rec-yr", formatMoney(res.annualRecovered, "EUR", 0) + "/yr");
       setText(doc, "out-sys-payback", res.paybackDays + " days");
-      setText(doc, "out-sys-roi", res.firstYearRoiMultiple.toFixed(1) + "x Year-1 ROI");
+      setText(doc, "out-sys-roi", res.firstYearRoiMultiple.toFixed(1) + "x scenario");
     }
 
-    [revEl, leakEl, tierEl].forEach(function (el) {
+    [revEl, leakEl, recEl, tierEl].forEach(function (el) {
+      if (!el) return;
       el.addEventListener("input", compute);
       el.addEventListener("change", compute);
     });

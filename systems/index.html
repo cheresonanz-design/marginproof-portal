@@ -37,7 +37,7 @@
         <span class="eyebrow gold">High-Price Done-For-You Rollouts · by VeriTakt Collective</span>
         <h1>MarginProof Systems: Turnkey Agency Financial &amp; Retainer Automation</h1>
         <p class="lead">
-          Love the spreadsheet rigor, but want it wired directly into your live agency stack without manual CSV copy-paste? <strong>VeriTakt Collective</strong> starts kickoff within 1–3 business days (Mon–Fri) and delivers custom quoting, Harvest/Clockify/Notion sync, and Stripe cashflow governance in 10–15 business days (Core) or 15–20 business days (Full OS) after client data access.
+          Love the spreadsheet rigor, but want it wired directly into your live agency stack without manual CSV copy-paste? <strong>VeriTakt Collective</strong> starts discovery within 1–3 business days (Mon–Fri) and delivers technical quoting/spreadsheet workflows under a written B2B SOW, NDA/DPA (Art. 28 GDPR), and proper EUR invoice (10–15 business days Core / 15–20 business days Full OS after data access; B2B § 14 BGB only, EU Reverse-Charge / USt-IdNr. verified on cross-border engagements).
         </p>
       </div>
     </section>
@@ -45,8 +45,8 @@
     <section class="section" data-calc="systems-roi">
       <div class="container">
         <div class="card" style="margin-bottom:28px;">
-          <h2>Interactive Margin Recovery ROI Estimator</h2>
-          <p style="color:var(--text-secondary); font-size:14.5px; margin-bottom:16px;">Estimate how fast a turnkey MarginProof rollout pays for itself when unbilled scope creep and under-priced retainers are plugged.</p>
+          <h2>Illustrative Margin Scenario Calculator (User Assumptions Only)</h2>
+          <p style="color:var(--text-secondary); font-size:14.5px; margin-bottom:16px;">Model a custom internal scenario using your own monthly revenue and assumed recovery percentage. <em>Illustrative planning math only — no financial guarantee is expressed or implied (§ 5 UWG).</em></p>
           <div class="grid-2" style="align-items:center;">
             <div class="form-grid">
               <div class="field">
@@ -57,10 +57,14 @@
                 <label for="sys-leak">Estimated Margin Lost to Creep/Discounts %</label>
                 <input id="sys-leak" type="number" min="1" max="50" step="1" value="15">
               </div>
-              <div class="field full">
+              <div class="field">
+                <label for="sys-rec-pct">Assumed Recovery Share % (Illustrative)</label>
+                <input id="sys-rec-pct" type="number" min="5" max="95" step="5" value="50">
+              </div>
+              <div class="field">
                 <label for="sys-tier">Rollout Package</label>
                 <select id="sys-tier">
-                  <option value="3500" selected>Tier 1: Core Margin &amp; Retainer Rollout — 3,500 EUR</option>
+                  <option value="3500" selected>Tier 1: Core Margin &amp; Retainer Setup — 3,500 EUR</option>
                   <option value="7500">Tier 2: Full Agency Financial &amp; Client OS — 7,500 EUR</option>
                 </select>
               </div>
@@ -69,22 +73,22 @@
               <div class="kpi-box">
                 <div class="kpi-label">Est. Monthly Margin Leak</div>
                 <div class="kpi-value" id="out-sys-leak-mo">-</div>
-                <div class="kpi-sub">Before guardrails</div>
+                <div class="kpi-sub">Based on your inputs</div>
               </div>
               <div class="kpi-box highlight">
-                <div class="kpi-label">Projected Monthly Recovery (75%)</div>
+                <div class="kpi-label">Illustrative Monthly Recovery (Scenario)</div>
                 <div class="kpi-value" id="out-sys-rec-mo">-</div>
-                <div class="kpi-sub">Annualized: <span id="out-sys-rec-yr">-</span></div>
+                <div class="kpi-sub">Annualized scenario: <span id="out-sys-rec-yr">-</span></div>
               </div>
               <div class="kpi-box highlight">
-                <div class="kpi-label">Estimated Payback Period</div>
+                <div class="kpi-label">Scenario Break-Even Period</div>
                 <div class="kpi-value" id="out-sys-payback">-</div>
-                <div class="kpi-sub">Based on one-time fee</div>
+                <div class="kpi-sub">Non-binding estimate</div>
               </div>
               <div class="kpi-box">
-                <div class="kpi-label">Year-1 ROI Multiple</div>
+                <div class="kpi-label">Illustrative Year-1 Multiple</div>
                 <div class="kpi-value" id="out-sys-roi">-</div>
-                <div class="kpi-sub">Net margin expansion</div>
+                <div class="kpi-sub">Assumes stable volume</div>
               </div>
             </div>
           </div>
@@ -92,26 +96,27 @@
 
         <div class="grid-2">
           <div class="card">
-            <span class="eyebrow">Tier 1 · 3–15 Person Agencies</span>
-            <h2 style="margin-top:10px;">Core Margin &amp; Retainer Automation Rollout</h2>
-            <div class="kpi-value" style="color:var(--emerald); margin:8px 0 12px;">3,500 EUR <span style="font-size:13px; color:var(--text-muted); font-family:var(--font-sans); font-weight:500;">one-time via Stripe</span></div>
+            <span class="eyebrow">Tier 1 · B2B § 14 BGB Only</span>
+            <h2 style="margin-top:10px;">Core Margin &amp; Retainer Technical Setup</h2>
+            <div class="kpi-value" style="color:var(--emerald); margin:8px 0 12px;">3,500 EUR <span style="font-size:13px; color:var(--text-muted); font-family:var(--font-sans); font-weight:500;">fixed SOW · Stripe / Invoice</span></div>
             <ul class="check-list">
               <li>Custom Rate Card &amp; Live Agency Profitability OS</li><li>Automated Harvest / Clockify / Toggl / Notion CSV &amp; Webhook sync</li><li>Monthly Scope-Creep Alert Script + 2x Team Trainings + 30-day async email tuning (Mon–Fri)</li>
-              <li>Kickoff within 1–3 business days (Mon–Fri) &middot; Delivery in 10–15 business days after data access</li>
+              <li>15-min Discovery &rarr; Written SOW + B2B AGB + Art. 28 GDPR DPA (AVV)</li>
+              <li>EU VAT / Reverse-Charge &amp; VAT-ID (USt-IdNr.) check before invoicing</li>
             </ul>
-            <a href="https://buy.stripe.com/fZu6oAfQReQu7Hy0IN24003" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-product-key="stripe_core_rollout">Book Core Rollout via Stripe (3,500 EUR)</a>
+            <a href="#stripe-core" class="btn btn-primary" data-product-key="stripe_core_rollout">Request B2B Discovery &amp; SOW (3,500 EUR)</a>
           </div>
 
           <div class="card" style="border-color: rgba(245,158,11,0.5);">
-            <span class="eyebrow gold">Tier 2 · Scaling Agencies (500k–3M EUR/yr)</span>
+            <span class="eyebrow gold">Tier 2 · B2B § 14 BGB Only</span>
             <h2 style="margin-top:10px;">Full Agency Financial &amp; Client Operations OS</h2>
-            <div class="kpi-value" style="color:var(--gold); margin:8px 0 12px;">7,500 EUR <span style="font-size:13px; color:var(--text-muted); font-family:var(--font-sans); font-weight:500;">one-time via Stripe</span></div>
+            <div class="kpi-value" style="color:var(--gold); margin:8px 0 12px;">7,500 EUR <span style="font-size:13px; color:var(--text-muted); font-family:var(--font-sans); font-weight:500;">fixed SOW · Stripe / Invoice</span></div>
             <ul class="check-list">
-              <li>Everything in Tier 1 Core Rollout</li><li>Automated Stripe Payment Link -&gt; Invoice -&gt; Cashflow &amp; Tax Ledger sync</li><li>Automated SOW/Proposal Generator + 60-day async executive email tuning (Mon–Fri)</li>
-              <li>Multi-currency VAT/Tax reserve forecasting &amp; renewal triggers</li>
-              <li>Kickoff within 1–3 business days &middot; Delivery in 15–20 business days after data access &middot; Async email response in 1–3 business days (Mon–Fri)</li>
+              <li>Everything in Tier 1 Core Rollout (technical setup, no tax/legal advice)</li><li>Automated Stripe Payment Link / Webhook -&gt; Cashflow &amp; Reserve ledger sync</li><li>Automated SOW/Proposal Templates + 60-day async executive email tuning (Mon–Fri)</li>
+              <li>Multi-currency reserve modeling (technical template — no tax/legal advice)</li>
+              <li>Requires signed NDA, Art. 28 GDPR DPA (AVV) &amp; SOW acceptance protocol (read-only client setup)</li>
             </ul>
-            <a href="https://buy.stripe.com/5kQ14g48937M6Ducrv24004" target="_blank" rel="noopener noreferrer" class="btn btn-gold" data-product-key="stripe_full_os">Book Full Agency OS via Stripe (7,500 EUR)</a>
+            <a href="#stripe-full" class="btn btn-gold" data-product-key="stripe_full_os">Request B2B Discovery &amp; SOW (7,500 EUR)</a>
           </div>
         </div>
       </div>
